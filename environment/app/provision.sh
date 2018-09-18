@@ -33,24 +33,24 @@ sudo nginx -s reload
 # sudo ufw allow 8080
 # sudo ufw status
 # sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-sudo apt-get install -y python-software-properties debconf-utils
-sudo add-apt-repository -y ppa:webupd8team/java
-sudo apt-get update
-echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
-sudo apt-get install -y oracle-java8-installer
-
-# sets Oracle JDK8 as default, to do that, install the oracle-java8-set-default package.
-sudo apt install oracle-java8-set-default -y
-
-wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
-
-sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
-
-sudo apt-get update && sudo apt-get upgrade
-
-sudo apt-get install -y jenkins
-
-sudo systemctl stop jenkins.service
-sudo systemctl start jenkins.service
-
-sudo systemctl enable jenkins.service
+# sudo apt-get install -y python-software-properties debconf-utils
+# sudo add-apt-repository -y ppa:webupd8team/java
+# sudo apt-get update
+# echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
+# sudo apt-get install -y oracle-java8-installer
+#
+# # sets Oracle JDK8 as default, to do that, install the oracle-java8-set-default package.
+# sudo apt install oracle-java8-set-default -y
+#
+# wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+#
+# sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+#
+# sudo apt-get update && sudo apt-get upgrade
+#
+# sudo apt-get install -y jenkins
+#
+# sudo systemctl stop jenkins.service
+# sudo systemctl start jenkins.service
+#
+# sudo systemctl enable jenkins.service
